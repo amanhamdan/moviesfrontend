@@ -11,18 +11,28 @@ import Badge from './components/Badge'
 import Button from './components/Button'
 import Card from './components/Card'
 import Navbar from './components/Navbar';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
 
-function App() {
+function App() { 
+  const lucyUrl1 ='https://m.media-amazon.com/images/M/MV5BODcxMzY3ODY1NF5BMl5BanBnXkFtZTgwNzg1NDY4MTE@._V1_.jpg';
+  const valerianUrl2 ='https://m.media-amazon.com/images/M/MV5BMTkxMDAxNDUyNV5BMl5BanBnXkFtZTgwOTc3MzcxMjI@._V1_FMjpg_UX1000_.jpg';
+  const matrixUrl3 ='https://resizing.flixster.com/u2t5GClorY2TS1WDOXdY-SuFzfM=/300x300/v2/https://flxt.tmsimg.com/assets/p22804_v_h9_ag.jpg';
+  const prideUrl4 ='https://m.media-amazon.com/images/M/MV5BMTA1NDQ3NTcyOTNeQTJeQWpwZ15BbWU3MDA0MzA4MzE@._V1_.jpg';
+
   return (
-    //<head></head>
-
+   
     <div className="App">
         <Navbar />
       <section className="card-container">
         <Card
           body='Do laborum sunt ut ex cupidatat exercitation. Do laborum sunt ut ex cupidatat exercitation. Do laborum sunt ut ex cupidatat exercitation. Do laborum sunt ut ex cupidatat exercitation.'
           title='Matrix'
-          image={matrix}
+          image={matrixUrl3}
 
           btn={{
             text: "Read Post",
@@ -34,7 +44,7 @@ function App() {
           <Card
           body='Do laborum sunt ut ex cupidatat exercitation. Do laborum sunt ut ex cupidatat exercitation. Do laborum sunt ut ex cupidatat exercitation. Do laborum sunt ut ex cupidatat exercitation.'
           title='Valerian'
-          image={valerian}
+          image={valerianUrl2}
 
           btn={{
             text: "Read Post",
@@ -46,7 +56,7 @@ function App() {
           <Card
           body='Do laborum sunt ut ex cupidatat exercitation. Do laborum sunt ut ex cupidatat exercitation. Do laborum sunt ut ex cupidatat exercitation. Do laborum sunt ut ex cupidatat exercitation.'
           title='Pride & Prejudice'
-          image={pride}
+          image={prideUrl4}
 
           btn={{
             text: "Read Post",
@@ -58,7 +68,7 @@ function App() {
         <Card
           body='Irure culpa quis in mollit ure culpa quis in molliure culpa quis in molli nulla et velit velit ullamco ipsum aliquip eu amet.'
           title='LUCY'
-          image={lucy}
+          image={lucyUrl1}
 
 
          // subtitle='Get your photo now'
