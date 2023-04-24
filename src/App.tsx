@@ -17,6 +17,7 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import people from './people.json';
 
 function App() { 
   const lucyUrl1 ='https://m.media-amazon.com/images/M/MV5BODcxMzY3ODY1NF5BMl5BanBnXkFtZTgwNzg1NDY4MTE@._V1_.jpg';
@@ -27,7 +28,16 @@ function App() {
   return (
    
     <div className="App">
-        <Navbar />
+      <Navbar />
+
+      {people.map((obj, inx) => (
+        <div key={inx}>
+          <p>Name: {obj.name}</p>
+          <p>Company: {obj.company}</p>
+          <p>===</p>
+        </div>
+      ))}
+
       <section className="card-container">
         <Card
           body='Do laborum sunt ut ex cupidatat exercitation. Do laborum sunt ut ex cupidatat exercitation. Do laborum sunt ut ex cupidatat exercitation. Do laborum sunt ut ex cupidatat exercitation.'
