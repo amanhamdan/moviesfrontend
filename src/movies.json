@@ -1,0 +1,36 @@
+[
+  {
+    "movieName": "Matrix",
+    "director": "Lana Wachowski, Lilly Wachowski",
+    "rating":8,
+    "category":"Action -fiction",
+    "image":"https://resizing.flixster.com/u2t5GClorY2TS1WDOXdY-SuFzfM=/300x300/v2/https://flxt.tmsimg.com/assets/p22804_v_h9_ag.jpg",
+    "body":"Do laborum sunt ut ex cupidatat exercitation. Do laborum sunt ut ex cupidatat exercitation. Do laborum sunt ut ex cupidatat exercitation. Do laborum sunt ut ex cupidatat exercitation."
+  },
+  {
+    "movieName": "Valerian",
+    "director": "Luc Besson",
+    "rating":6,
+    "category":"Thriller -fiction",
+    "image":"https://m.media-amazon.com/images/M/MV5BMTkxMDAxNDUyNV5BMl5BanBnXkFtZTgwOTc3MzcxMjI@._V1_FMjpg_UX1000_.jpg",
+    "body":"Do laborum sunt ut ex cupidatat exercitation. Do laborum sunt ut ex cupidatat exercitation. Do laborum sunt ut ex cupidatat exercitation. Do laborum sunt ut ex cupidatat exercitation."
+
+  },
+  {
+    "movieName": "Pride & Prejudice",
+    "director": "Luc Besson",
+    "rating":9,
+    "category":"Romance",
+    "image":"https://m.media-amazon.com/images/M/MV5BMTA1NDQ3NTcyOTNeQTJeQWpwZ15BbWU3MDA0MzA4MzE@._V1_.jpg",
+    "body":"Do laborum sunt ut ex cupidatat exercitation. Do laborum sunt ut ex cupidatat exercitation. Do laborum sunt ut ex cupidatat exercitation. Do laborum sunt ut ex cupidatat exercitation."
+
+  },
+  {
+    "movieName": "Lucy",
+    "director": "LUC BESSON",
+    "rating":6,
+    "category":"Fiction",
+    "image":"https://m.media-amazon.com/images/M/MV5BODcxMzY3ODY1NF5BMl5BanBnXkFtZTgwNzg1NDY4MTE@._V1_.jpg",
+    "body":"Do laborum sunt ut ex cupidatat exercitation. Do laborum sunt ut ex cupidatat exercitation. Do laborum sunt ut ex cupidatat exercitation. Do laborum sunt ut ex cupidatat exercitation."
+  }
+]

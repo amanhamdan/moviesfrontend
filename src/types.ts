@@ -4,9 +4,10 @@ export interface BadgeInterface {
 }
 
 export interface ButtonInterface {
-  text: string;
+  rating: number;
   type: string;
-  href: string;
+  category:string;
+  director: string;
   filled?: boolean;
   icon?: JSX.Element;
 }
@@ -15,7 +16,7 @@ export interface CardInterface {
   indicator?: string,
   badge?: BadgeInterface,
   image?: string,
-  title: string,
+  movieName: string,
   subtitle?: string,
   body: string,
   btn: ButtonInterface

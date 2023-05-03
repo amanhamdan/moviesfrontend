@@ -3,7 +3,7 @@ import Badge from "./Badge"
 import Button from "./Button"
 import styles from './Card.module.css'
 
-const Card = ({body,btn,title,badge,image,indicator, subtitle}: CardInterface) => {
+const Card = ({body,btn,movieName,badge,image,indicator, subtitle}: CardInterface) => {
   return (
     <article className={`stack-lg ${styles.card}`}>
       {indicator &&
@@ -16,17 +16,18 @@ const Card = ({body,btn,title,badge,image,indicator, subtitle}: CardInterface) =
         <img src={image} alt="Random Image" className={styles.image} />
       }
       <div className="stack-sm">
-        <h3 className={styles.title}>{title}</h3>
+        <h3 className={styles.title}>{movieName}</h3>
         {subtitle &&
           <small className={styles.subtitle}>{subtitle}</small>
         }
       </div>
       <p className={styles.body}>{body}</p>
       <Button
+        category={btn.category}
         filled={btn.filled}
         type={btn.type}
-        text={btn.text}
-        href={btn.href}
+        rating={btn.rating}
+        director={btn.director}
         icon={btn.icon}
       />
     </article>

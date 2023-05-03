@@ -1,7 +1,7 @@
 import { ButtonInterface } from "../types"
 import styles from './Button.module.css'
 import { useState } from "react";
-const Button = ({text, filled, type, href, icon}: ButtonInterface) => {
+const Button = ({rating, filled, type, director, icon, category}: ButtonInterface) => {
   const filledClass = filled ? styles.filled : "";
   const [showBox, setShowBox] = useState(false);
 
@@ -24,7 +24,10 @@ const Button = ({text, filled, type, href, icon}: ButtonInterface) => {
       {showBox && (
         <div className="box" onClick={handleBoxClick}>
           <div></div>
-          <p>This is the content of the box.</p>
+          <p>Rating : {rating}</p>
+          <p>Director : {director}</p>
+          <p>Category : {category}</p>
+          
         </div>
       )}
     </div>
