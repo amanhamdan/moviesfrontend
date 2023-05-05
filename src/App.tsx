@@ -22,11 +22,15 @@ import { CardInterface } from './types';
 
 function App() { 
   
-  const [movies, setMovies] = useState<CardInterface[]>([]);
+  const [movies, setMovies] = useState<any[]>([]);
 
   useEffect(() => {
     getAllMovies()
-      .then(response => setMovies(response.data))
+      .then(response =>{
+        console.log(response)
+        setMovies(response.data)}
+      
+      )
       .catch(error => console.error(error));
   }, []);
   
@@ -42,11 +46,11 @@ function App() {
         movieName={movie.movieName}
         image={movie.image}
         body={movie.body}
-        id={44}
+        id={0}
         btn={{
-          category: movie.btn.category,
-          rating: movie.btn.rating,
-          director: movie.btn.director,
+          category: movie.category,
+          rating: movie.rating,
+          director: movie.director,
           type: 'primary',
           filled: true,
         }}  />
