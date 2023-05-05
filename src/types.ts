@@ -13,6 +13,7 @@ export interface ButtonInterface {
 }
 
 export interface CardInterface {
+  id: number;
   indicator?: string,
   badge?: BadgeInterface,
   image?: string,

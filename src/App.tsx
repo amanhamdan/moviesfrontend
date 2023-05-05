@@ -1,10 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import valerian from './poster1.jpg';
-import lucy from './lucy.jpg';
-import matrix from './mat2.jpg';
-import pride from './pride.jpg';
 import { BeakerIcon } from '@heroicons/react/24/solid'
 import { PaperAirplaneIcon, CameraIcon, DocumentIcon } from '@heroicons/react/24/solid'
 import Badge from './components/Badge'
@@ -18,9 +13,22 @@ import {
   Link,
 } from "react-router-dom";
 
+import { useState, useEffect } from 'react';
+import { getAllMovies, createMovie, deleteMovie } from './api';
+
 import movies from './movies.json';
+import { CardInterface } from './types';
+
 
 function App() { 
+  
+  const [movies, setMovies] = useState<CardInterface[]>([]);
+
+  useEffect(() => {
+    getAllMovies()
+      .then(response => setMovies(response.data))
+      .catch(error => console.error(error));
+  }, []);
   
   return (
    
@@ -28,21 +36,20 @@ function App() {
       <Navbar />
 
       <section className="card-container">
-      {movies.map((obj, inx) => (
+      {movies.map(movie  => (
         
-        <Card key={inx}
-          movieName={obj.movieName}
-          image={obj.image}
-          body={obj.body}
-
-          btn={{
-            category:obj.category,
-            rating: obj.rating,
-            director: obj.director,
-            type: 'primary',
-            filled: true,
-            
-          }} />
+        <Card key={movie.id}
+        movieName={movie.movieName}
+        image={movie.image}
+        body={movie.body}
+        id={44}
+        btn={{
+          category: movie.btn.category,
+          rating: movie.btn.rating,
+          director: movie.btn.director,
+          type: 'primary',
+          filled: true,
+        }}  />
           
         
           )
