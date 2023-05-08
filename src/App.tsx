@@ -17,12 +17,12 @@ import { useState, useEffect } from 'react';
 import { getAllMovies, createMovie, deleteMovie } from './api';
 
 import movies from './movies.json';
-import { CardInterface } from './types';
+import { CardInterface, Movie } from './types';
 
 
 function App() { 
   
-  const [movies, setMovies] = useState<any[]>([]);
+  const [movies, setMovies] = useState<Movie[]>([]);
 
   useEffect(() => {
     getAllMovies()

@@ -12,6 +12,16 @@ export interface ButtonInterface {
   icon?: JSX.Element;
 }
 
+export interface Movie{
+  id: number;
+  image?: string,
+  movieName: string,
+  body: string,
+  category:string;
+  director: string;
+  rating: number;
+}
+
 export interface CardInterface {
   id: number;
   indicator?: string,
